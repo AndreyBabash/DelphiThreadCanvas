@@ -1,0 +1,65 @@
+unit Main;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, TMyThread;
+
+type
+  TForm1 = class(TForm)
+    PaintBox1: TPaintBox;
+    Button1: TButton;
+    Button2: TButton;
+    procedure PaintBox1Paint(Sender: TObject; Canvas: TCanvas);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+    x:integer;
+    y:integer;
+    flag:boolean;
+    t:TMyNewThread;
+  public
+    { Public declarations }
+  end;
+
+
+var
+  Form1: TForm1;
+
+
+implementation
+
+{$R *.fmx}
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  flag:=true;
+  t:=TMyThread.Create(True);
+  t.FreeOnTerminate:=true;
+  t.Start;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  flag:=false;
+end;
+
+procedure TForm1.PaintBox1Paint(Sender: TObject; Canvas: TCanvas);
+var PixelPos:TPointF;  PixelRegion:TRectF;
+begin
+  PaintBox1.Canvas.Stroke.Color:=TAlphaColors.Coral;
+  PaintBox1.Canvas.Stroke.Dash:=TStrokeDash.Solid;
+  PaintBox1.Canvas.Stroke.Thickness:=4;
+  PaintBox1.Canvas.BeginScene();
+  PixelPos:=PaintBox1.Canvas.AlignToPixel(TPointF.Create(x,y));
+  PixelRegion:=TRectF.Create(PixelPos,1,1);
+  PaintBox1.Canvas.DrawRect(PixelRegion,0,0,AllCorners,1);
+  PaintBox1.Canvas.EndScene;
+
+end;
+
+end.

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021.09.04 18:50:42.020,=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021.09.04 18:54:08.189,=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021.09.04 18:59:27.758,C:\Users\TIGER\Desktop\ThreadEx\Main.pas=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021.09.04 18:59:27.758,C:\Users\TIGER\Desktop\ThreadEx\Main.fmx=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2021.09.04 18:59:54.067,C:\Users\TIGER\Desktop\ThreadEx\MyThreadProj.dproj=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021.09.04 20:32:02.683,=C:\Users\TIGER\Desktop\ThreadEx\Unit1.pas</Transaction>
+    <Transaction>2021.09.04 20:32:33.484,C:\Users\TIGER\Desktop\ThreadEx\TMyThread.pas=C:\Users\TIGER\Desktop\ThreadEx\Unit1.pas</Transaction>
+    <Transaction>2021.09.04 20:39:12.286,=C:\Users\TIGER\Desktop\ThreadEx\Unit1.pas</Transaction>
+    <Transaction>2021.09.04 21:04:09.359,=C:\Users\TIGER\Desktop\ThreadEx\Unit1.pas</Transaction>
+  </Transactions>
+  <ActiveMobileDevice>   <NoProfile Android="c08083915d4dd8f"/>
+  </ActiveMobileDevice>
+</BorlandProject>

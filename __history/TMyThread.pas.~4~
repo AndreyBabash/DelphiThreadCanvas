@@ -1,0 +1,38 @@
+unit TMyThread;
+
+interface
+
+uses System.Classes;
+
+type TMyNewThread = class(TThread)
+private
+{ Private declarations }
+protected
+procedure Execute; override;
+procedure Repaint;
+end;
+
+implementation
+
+{ TMyThread }
+
+procedure TMyNewThread.Execute;
+begin
+  inherited;
+  Randomize;
+  while Form1.flag do
+  begin
+    Form1.x:=Random(Round(Form1.PaintBox1.Width));
+    Form1.y:=Random(Round(Form1.PaintBox1.Height));
+    Synchronize(Repaint);
+  end;
+
+end;
+
+procedure TMyNewThread.Repaint;
+begin
+  Form1.PaintBox1.Repaint;
+  TThread.Sleep(100);
+end;
+
+end.
